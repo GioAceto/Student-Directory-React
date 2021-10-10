@@ -1,3 +1,182 @@
-h1 {
-  color: blue;
+$gray: #dfe3ee;
+$blue: #3d7dca;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app-container {
+  margin: 0 auto;
+  width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+  header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+
+    h1 {
+      padding: 0.5rem;
+      width: 100%;
+      font-size: 2rem;
+      color: white;
+      letter-spacing: 0.1rem;
+      text-align: center;
+      box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+    }
+  }
+
+    &-inner {
+      display: flex;
+      flex-direction: row;
+
+    .modify-container {
+      width: 350px;
+      background-color: $blue;
+
+      .top-container {
+        margin: 0 auto;
+        padding: 1rem 0;
+        width: 325px;
+        background-color: $gray;
+        letter-spacing: 0.07rem;
+
+        h2 {
+          margin-bottom: 1rem;
+          text-align: center;
+          letter-spacing: 0.07rem;
+        }
+
+        .choice-container {
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+
+          label {
+            margin-right: 0.5rem;
+            font-weight: 500;
+          }
+
+          select {
+            padding: 0.5rem;
+            font-size: 16px;
+            font-weight: 500;
+            border: 1px solid black;
+            background: none;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    
+
+      .addForm,
+      .updateForm,
+      .deleteForm {
+        margin: 0 auto;
+        padding: 0 0 1rem 0;
+        width: 325px;
+        background-color: $gray;
+        letter-spacing: 0.07rem;
+        display: flex;
+        flex-direction: column;
+
+        .input-container {
+          padding: 1rem;
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+
+          label {
+            margin-bottom: 0.2rem;
+          }
+
+          input {
+            margin-bottom: 0.5rem;
+            padding: 0 0.5rem;
+            height: 2rem;
+            font-size: 1rem;
+            background: none;
+            border: none;
+            border-bottom: 2px solid black;
+          }
+        }
+
+        .submit-container {
+          padding: 0 1rem 0 0;
+          height: 3rem;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          button {
+            width: 150px;
+            height: 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+            transition-duration: 0.2s;
+
+            &:hover {
+              cursor: pointer;
+              color: white;
+              background-color: #ACACAC;
+            }
+          }
+        }
+      }
+    }
+
+    .students-container {
+      width: 350px;
+      background-color: $gray;
+
+        .profile {
+          margin: 1rem auto 1rem auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+        .avatar {
+          margin: 0 auto;
+          width: 150px;
+        }
+
+        h2 {
+          padding: 0.5rem 0;
+          text-align: center;
+          letter-spacing: 0.07rem;
+        }
+
+          .data-list {
+            margin: 0 auto;
+            padding: 0.5rem;
+
+          h3 {
+            padding: 0.1rem;
+            font-size: 1rem;
+            letter-spacing: 0.07rem;
+          }
+
+          .separation {
+            margin: 1.5rem auto 0 0;
+            height: 5px;
+            width: 260px;
+            background-color: white;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
 }
