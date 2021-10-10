@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
+import emily from './assets/emily.svg'
+import fiona from './assets/fiona.svg'
+import travis from './assets/travis.svg'
+import chloe from './assets/chloe.svg'
+import maya from './assets/maya.svg'
+import michael from './assets/michael.svg'
+import noah from './assets/noah.svg'
+import sarah from './assets/sarah.svg'
+import scott from './assets/scott.svg'
+import nadine from './assets/nadine.svg'
+import salim from './assets/salim.svg'
+import caleb from './assets/caleb.svg'
 
 const students = [
   {
@@ -9,7 +21,7 @@ const students = [
     address: 'Salem, MA',
     gpa: '3.70',
     major: 'Biochemistry',
-    image: 'emily.svg',
+    image: emily,
     id: '000001'
   },
   {
@@ -18,7 +30,7 @@ const students = [
     address: 'Providence, RI',
     gpa: '3.82',
     major: 'Psychology',
-    image: 'fiona.svg',
+    image: fiona,
     id: '000002'
   },
   {
@@ -27,7 +39,7 @@ const students = [
     address: 'Keene, NH',
     gpa: '3.50',
     major: 'Mechanical Engineering',
-    image: 'travis.svg',
+    image: travis,
     id: '000003'
   },
   {
@@ -36,7 +48,7 @@ const students = [
     address: 'Bridgeport, CT',
     gpa: '3.28',
     major: 'Political Science',
-    image: 'chloe.svg',
+    image: chloe,
     id: '000004'
   },
   {
@@ -45,7 +57,7 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.80',
     major: 'Graphic Design',
-    image: 'maya.svg',
+    image: maya,
     id: '000005'
   },
   {
@@ -54,7 +66,7 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.70',
     major: 'Biology',
-    image: 'michael.svg',
+    image: michael,
     id: '000006'
   },
   {
@@ -63,7 +75,7 @@ const students = [
     address: 'Portland, ME',
     gpa: '3.78',
     major: 'Civil Engineering',
-    image: 'noah.svg',
+    image: noah,
     id: '000007'
   },
   {
@@ -72,7 +84,7 @@ const students = [
     address: 'Beverly, MA',
     gpa: '4.00',
     major: 'Biology',
-    image: 'sarah.svg',
+    image: sarah,
     id: '000008'
   },
   {
@@ -81,7 +93,7 @@ const students = [
     address: 'Philadelphia, PA',
     gpa: '3.40',
     major: 'Accounting',
-    image: 'scott.svg',
+    image: scott,
     id: '000009'
   },
   {
@@ -90,7 +102,7 @@ const students = [
     address: 'Montreal, QC',
     gpa: '4.00',
     major: 'Biology',
-    image: 'nadine.svg',
+    image: nadine,
     id: '000010'
   },
   {
@@ -99,7 +111,7 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.75',
     major: 'Physics',
-    image: 'salim.svg',
+    image: salim,
     id: '000011'
   },
   {
@@ -108,7 +120,7 @@ const students = [
     address: 'Anaheim, CA',
     gpa: '3.20',
     major: 'Accounting',
-    image: 'caleb.svg',
+    image: caleb,
     id: '000012'
   }
 ]
