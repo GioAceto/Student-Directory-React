@@ -9,7 +9,8 @@ const students = [
     address: 'Salem, MA',
     gpa: '3.70',
     major: 'Biochemistry',
-    image: 'emily.svg'
+    image: 'emily.svg',
+    id: '000001'
   },
   {
     name: 'Fiona',
@@ -17,7 +18,8 @@ const students = [
     address: 'Providence, RI',
     gpa: '3.82',
     major: 'Psychology',
-    image: 'fiona.svg'
+    image: 'fiona.svg',
+    id: '000002'
   },
   {
     name: 'Travis',
@@ -25,7 +27,8 @@ const students = [
     address: 'Keene, NH',
     gpa: '3.50',
     major: 'Mechanical Engineering',
-    image: 'travis.svg'
+    image: 'travis.svg',
+    id: '000003'
   },
   {
     name: 'Chloe',
@@ -33,7 +36,8 @@ const students = [
     address: 'Bridgeport, CT',
     gpa: '3.28',
     major: 'Political Science',
-    image: 'chloe.svg'
+    image: 'chloe.svg',
+    id: '000004'
   },
   {
     name: 'Maya',
@@ -41,7 +45,8 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.80',
     major: 'Graphic Design',
-    image: 'maya.svg'
+    image: 'maya.svg',
+    id: '000005'
   },
   {
     name: 'Michael',
@@ -49,7 +54,8 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.70',
     major: 'Biology',
-    image: 'michael.svg'
+    image: 'michael.svg',
+    id: '000006'
   },
   {
     name: 'Noah',
@@ -57,7 +63,8 @@ const students = [
     address: 'Portland, ME',
     gpa: '3.78',
     major: 'Civil Engineering',
-    image: 'noah.svg'
+    image: 'noah.svg',
+    id: '000007'
   },
   {
     name: 'Sarah',
@@ -65,7 +72,8 @@ const students = [
     address: 'Beverly, MA',
     gpa: '4.00',
     major: 'Biology',
-    image: 'sarah.svg'
+    image: 'sarah.svg',
+    id: '000008'
   },
   {
     name: 'Scott',
@@ -73,7 +81,8 @@ const students = [
     address: 'Philadelphia, PA',
     gpa: '3.40',
     major: 'Accounting',
-    image: 'scott.svg'
+    image: 'scott.svg',
+    id: '000009'
   },
   {
     name: 'Nadine',
@@ -81,7 +90,8 @@ const students = [
     address: 'Montreal, QC',
     gpa: '4.00',
     major: 'Biology',
-    image: 'nadine.svg'
+    image: 'nadine.svg',
+    id: '000010'
   },
   {
     name: 'Salim',
@@ -89,7 +99,8 @@ const students = [
     address: 'Boston, MA',
     gpa: '3.75',
     major: 'Physics',
-    image: 'salim.svg'
+    image: 'salim.svg',
+    id: '000011'
   },
   {
     name: 'Caleb',
@@ -97,7 +108,8 @@ const students = [
     address: 'Anaheim, CA',
     gpa: '3.20',
     major: 'Accounting',
-    image: 'caleb.svg'
+    image: 'caleb.svg',
+    id: '000012'
   }
 ]
 
@@ -219,7 +231,7 @@ const StudentsContainer = () => {
 }
 
 const Student = (props) => {
-  const { name, age, address, gpa, major, image } = props.student
+  const { name, age, address, gpa, major, image, id } = props.student
   return (
     <div className="profile">
       <h2>{name}</h2>
@@ -229,7 +241,7 @@ const Student = (props) => {
         <h3>Home Address: {address}</h3>
         <h3>GPA: {gpa}</h3>
         <h3>Major: {major}</h3>
-        <h3>Student ID:</h3>
+        <h3>Student ID: {id}</h3>
         <div className="separation"></div>
       </div>
     </div>
