@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.scss';
 
@@ -133,9 +133,6 @@ const App = () => {
       <div className="app-container-inner">
         <div className="modify-container">
           <TopContainer />
-          <AddStudentForm />
-          <UpdateStudentForm />
-          <DeleteStudentForm />
         </div>
         <StudentsContainer />
       </div>
@@ -161,19 +158,59 @@ const TopContainer = () => {
 }
 
 const ChoiceContainer = () => {
+  const [formResult, setFormResult] = useState(AddStudentForm)
 
-  const handleFormChange = () => {
-    console.log("test")
+  const handleFormChange = (event) => {
+    if (event.target.value === "update") {
+      setFormResult(UpdateStudentForm)
+    } else if (event.target.value === "delete") {
+      setFormResult(DeleteStudentForm)
+    } else if (event.target.value === "add") {
+      setFormResult(AddStudentForm)
+    }
   }
 
   return (
-    <div className="choice-container">
-      <label>I want to:</label>
-      <select id="select" onChange={handleFormChange}>
-        <option value="add">add a student</option>
-        <option value="update">edit a student</option>
-        <option value="delete">delete a student</option>
-      </select>
+    <>
+      <div className="choice-container">
+        <label>I want to:</label>
+        <select id="select" onChange={handleFormChange}>
+          <option value="add">add a student</option>
+          <option value="update">edit a student</option>
+          <option value="delete">delete a student</option>
+        </select>
+      </div>
+      {formResult}
+    </>
+  )
+}
+
+const StudentsContainer = () => {
+  return (
+    <div className="students-container" >
+      {students.map((student) => {
+        return (
+          <Student key={student.id} student={student} />
+        )
+      })}
+    </div>
+  )
+}
+
+const Student = (props) => {
+  const { name, age, address, gpa, major, image, id } = props.student
+  return (
+    <div className="profile">
+      <h2>{name}</h2>
+      <img className="avatar" src={image} alt="student pic"></img>
+      <div className="data-list">
+        <h3>Age: {age}</h3>
+        <h3>Home Address: {address}</h3>
+        <h3>GPA: {gpa}</h3>
+        <h3>Major: {major}</h3>
+        <h3>Student ID: {id}</h3>
+        <div className="separation"></div>
+      </div>
     </div>
   )
 }
@@ -239,36 +276,6 @@ const DeleteStudentForm = () => {
         <button className="submit" type="submit">Submit Change</button>
       </div>
     </form>
-  )
-}
-
-const StudentsContainer = () => {
-  return (
-    <div className="students-container" >
-      {students.map((student) => {
-        return (
-          <Student student={student} />
-        )
-      })}
-    </div>
-  )
-}
-
-const Student = (props) => {
-  const { name, age, address, gpa, major, image, id } = props.student
-  return (
-    <div className="profile">
-      <h2>{name}</h2>
-      <img className="avatar" src={image} alt="student pic"></img>
-      <div className="data-list">
-        <h3>Age: {age}</h3>
-        <h3>Home Address: {address}</h3>
-        <h3>GPA: {gpa}</h3>
-        <h3>Major: {major}</h3>
-        <h3>Student ID: {id}</h3>
-        <div className="separation"></div>
-      </div>
-    </div>
   )
 }
 
